@@ -312,11 +312,11 @@ public class Assignment {
 
     }
 
-    //todo
     private static void swapArrayNumbers() {
         var count = 0;
         String [] arr;
         int [] num;
+        int temp;
         
         System.out.println("Enter array numbers comma , seperated");
         var input = sc.next();
@@ -330,10 +330,10 @@ public class Assignment {
         }
 
         
-        for(int i = 0 ; i < num.length ; i++ ){
-            for(int j = 0 ; j < num.length ; j++){
-                num[i] = (num[i] + num[j]) - (num[j] = num[i]);
-            }
+        for(int i = 0 ; i < num.length - 1 ; i = i + 2 ){
+            temp = num[i];
+            num[i] = num[i+1];
+            num[i+1] = temp;
         }
     
       
